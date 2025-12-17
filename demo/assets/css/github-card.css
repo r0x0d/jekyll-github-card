@@ -1,0 +1,185 @@
+/* Jekyll GitHub Card Styles
+ * Supports both light and dark themes
+ * For Chirpy theme: uses data-mode="light" for light, default for dark
+ */
+
+.github-card {
+  --github-card-bg: #0d1117;
+  --github-card-border: #30363d;
+  --github-card-text: #e6edf3;
+  --github-card-text-secondary: #8b949e;
+  --github-card-link: #58a6ff;
+  --github-card-link-hover: #79c0ff;
+  --github-card-error-bg: #3d1f28;
+  --github-card-error-border: #f85149;
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  background-color: var(--github-card-bg);
+  border: 1px solid var(--github-card-border);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  max-width: 480px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-card:hover {
+  border-color: var(--github-card-link);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Light theme support */
+[data-mode="light"] .github-card,
+[data-theme="light"] .github-card,
+.light .github-card,
+.github-card.light {
+  --github-card-bg: #ffffff;
+  --github-card-border: #d0d7de;
+  --github-card-text: #1f2328;
+  --github-card-text-secondary: #656d76;
+  --github-card-link: #0969da;
+  --github-card-link-hover: #0550ae;
+  --github-card-error-bg: #ffebe9;
+  --github-card-error-border: #cf222e;
+}
+
+[data-mode="light"] .github-card:hover,
+[data-theme="light"] .github-card:hover,
+.light .github-card:hover,
+.github-card.light:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Prefer color scheme for automatic detection */
+@media (prefers-color-scheme: light) {
+  .github-card:not([data-theme]):not(.dark) {
+    --github-card-bg: #ffffff;
+    --github-card-border: #d0d7de;
+    --github-card-text: #1f2328;
+    --github-card-text-secondary: #656d76;
+    --github-card-link: #0969da;
+    --github-card-link-hover: #0550ae;
+    --github-card-error-bg: #ffebe9;
+    --github-card-error-border: #cf222e;
+  }
+}
+
+/* Header */
+.github-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.github-card-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--github-card-link);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.github-card-link:hover {
+  color: var(--github-card-link-hover);
+  text-decoration: underline;
+}
+
+.github-card-icon {
+  flex-shrink: 0;
+  color: var(--github-card-text-secondary);
+}
+
+.github-card-repo-name {
+  word-break: break-word;
+}
+
+/* Body */
+.github-card-body {
+  margin-bottom: 12px;
+}
+
+.github-card-description {
+  color: var(--github-card-text);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Footer */
+.github-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.github-card-language {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--github-card-text-secondary);
+}
+
+.github-card-language-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.github-card-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.github-card-stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--github-card-text-secondary);
+  cursor: default;
+}
+
+.github-card-stat svg {
+  flex-shrink: 0;
+  color: var(--github-card-text-secondary);
+}
+
+/* Error state */
+.github-card-error {
+  background-color: var(--github-card-error-bg);
+  border-color: var(--github-card-error-border);
+}
+
+.github-card-error:hover {
+  border-color: var(--github-card-error-border);
+}
+
+.github-card-error-message {
+  color: var(--github-card-error-border);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .github-card {
+    max-width: 100%;
+  }
+  
+  .github-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

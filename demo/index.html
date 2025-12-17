@@ -1,0 +1,151 @@
+---
+layout: default
+title: Jekyll GitHub Card - Demo
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>GitHub Card</h1>
+    <p>Embed beautiful, responsive GitHub repository cards in your Jekyll site with a simple Liquid tag.</p>
+    <div class="badge-row">
+      <span class="badge">
+        <span class="badge-dot"></span>
+        v0.2.0
+      </span>
+      <span class="badge">Jekyll Plugin</span>
+      <span class="badge">Light & Dark</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Quick Start</h2>
+      <p>Use the simple Liquid tag to embed any GitHub repository.</p>
+    </div>
+    
+    <div class="usage-block">
+      <div class="usage-header">
+        <span class="usage-label">Liquid</span>
+      </div>
+      <div class="usage-code">{% raw %}{% github r0x0d/jekyll-github-card %}{% endraw %}</div>
+    </div>
+    
+    <div class="card-single">
+      {% github r0x0d/jekyll-github-card %}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Popular Repositories</h2>
+      <p>Works beautifully with any public GitHub repository.</p>
+    </div>
+    
+    <div class="cards-grid">
+      {% github facebook/react %}
+      {% github microsoft/vscode %}
+      {% github torvalds/linux %}
+      {% github rails/rails %}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Multi-Language Support</h2>
+      <p>Automatic language detection with color-coded badges.</p>
+    </div>
+    
+    <div class="cards-grid">
+      {% github python/cpython %}
+      {% github golang/go %}
+      {% github rust-lang/rust %}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Features</h2>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/>
+          </svg>
+        </div>
+        <h3>Theme Aware</h3>
+        <p>Automatically adapts to light and dark themes using CSS media queries.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>Live API Data</h3>
+        <p>Fetches real-time stats from GitHub API including stars, forks, and language.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3>Responsive</h3>
+        <p>Fluid design that looks great on desktop, tablet, and mobile devices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Installation</h2>
+      <p>Add the plugin to your Jekyll site in minutes.</p>
+    </div>
+    
+    <div class="usage-block">
+      <div class="usage-header">
+        <span class="usage-label">Gemfile</span>
+      </div>
+      <div class="usage-code">gem 'jekyll-github-card'</div>
+    </div>
+    
+    <div class="usage-block">
+      <div class="usage-header">
+        <span class="usage-label">_config.yml</span>
+      </div>
+      <div class="usage-code">plugins:<br>  - jekyll-github-card</div>
+    </div>
+    
+    <div class="usage-block">
+      <div class="usage-header">
+        <span class="usage-label">Layout HTML</span>
+      </div>
+      <div class="usage-code">&lt;link rel="stylesheet" href="&#123;&#123; '/assets/css/github-card.css' | relative_url &#125;&#125;"&gt;</div>
+    </div>
+  </div>
+</section>
+

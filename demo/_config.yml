@@ -1,0 +1,23 @@
+# Jekyll GitHub Card Demo Site
+title: Jekyll GitHub Card
+description: A Jekyll plugin that embeds beautiful GitHub repository cards
+url: ""
+baseurl: "/jekyll-github-card"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-github-card
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# GitHub Pages settings
+remote_theme: null
+
